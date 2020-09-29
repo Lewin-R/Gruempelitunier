@@ -5,6 +5,8 @@ namespace Gruempelitunier
 {
     public class Player
     {
+
+
         public  string Name { get; set; }
         public  string Prename { get; set; }
         public  string PhoneNumber { get; set; }
@@ -12,7 +14,6 @@ namespace Gruempelitunier
         public  string HouseNumber { get; set; }
         public  string Place { get; set; }
         public  string Zip { get; set; }
-
 
         public static Player Create()
         {
