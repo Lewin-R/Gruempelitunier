@@ -1,0 +1,15 @@
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\bin\Debug\netcoreapp3.1\Gruempelitunier.exe
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\bin\Debug\netcoreapp3.1\Gruempelitunier.deps.json
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\bin\Debug\netcoreapp3.1\Gruempelitunier.runtimeconfig.json
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\bin\Debug\netcoreapp3.1\Gruempelitunier.runtimeconfig.dev.json
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\bin\Debug\netcoreapp3.1\Gruempelitunier.dll
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\bin\Debug\netcoreapp3.1\Gruempelitunier.pdb
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\obj\Debug\netcoreapp3.1\Gruempelitunier.csprojAssemblyReference.cache
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\obj\Debug\netcoreapp3.1\Gruempelitunier.AssemblyInfoInputs.cache
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\obj\Debug\netcoreapp3.1\Gruempelitunier.AssemblyInfo.cs
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\obj\Debug\netcoreapp3.1\Gruempelitunier.dll
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\obj\Debug\netcoreapp3.1\Gruempelitunier.pdb
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\obj\Debug\netcoreapp3.1\Gruempelitunier.genruntimeconfig.cache
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\bin\Debug\netcoreapp3.1\ConsoleTables.dll
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\obj\Debug\netcoreapp3.1\Gruempelitunier.csproj.CoreCompileInputs.cache
+C:\Users\fireh\Desktop\Praktikum\EGELI\Aufgaben\Gruempelitunier\Gruempelitunier\obj\Debug\netcoreapp3.1\Gruempelitunier.csproj.CopyComplete
