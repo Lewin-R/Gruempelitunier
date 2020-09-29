@@ -8,8 +8,6 @@ namespace Gruempelitunier
     {
         private static void Main(string[] args)
         {
-
-
             var PA = new List<Player>();
 
             do
