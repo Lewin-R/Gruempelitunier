@@ -1,25 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using ConsoleTables;
 
 namespace Gruempelitunier
 {
-    internal class Team : Program
+    internal class Team
     {
 
         internal List<Player> PA { get; private set; } = new List<Player>();
         internal  string TName { get; set; }
+        internal List<Team> teams { get; set; }
         internal int Points { get; set; }
 
+        
 
         public static Team Create()
         {
             Console.WriteLine("Geben Sie bitte den Namen für das Team ein: ");
             var TName = Console.ReadLine();
 
-            var team = new Team() {
-                TName = TName
-            };
+            var team = new Team();
+            team.TName = TName;
 
             do {
                 Player p1 = Player.Create();
@@ -51,6 +53,5 @@ namespace Gruempelitunier
             TName = Console.ReadLine();
 
         }
-
     }
 }

@@ -8,11 +8,11 @@ namespace Gruempelitunier
 {
     internal class Program
     {
-       
-        internal List<Game> _games = new List<Game>();
 
-        private static readonly TeamManager _teamManager = new TeamManager();
-       
+        internal List<Game> _games = new List<Game>();
+        private static readonly Menu _menu = new Menu();
+
+
         private static void Main(string[] args)
         {
             bool isRunning = true; //isRunning weil neues wort gross
@@ -21,17 +21,20 @@ namespace Gruempelitunier
 
 
             while (isRunning) {
-                Console.WriteLine("Team erstellen u. Spieler hinzufügen (1)");
-                Console.WriteLine("Teamname bearbeiten (2)");
-                Console.WriteLine("Spieler bearbeiten (3)");
+                Console.WriteLine("Team bearbeiten (1)");
+                Console.WriteLine("Spieler bearbeiten(2)");
+                Console.WriteLine("(3)");
                 Console.WriteLine("Quit (q)");
 
                 switch (Console.ReadLine()) {
                     case "1":
-                        _teamManager.CreateTeam();
+                         _menu.TeamEdit();
                         break;
                     case "2":
-                        _teamManager.ChangeTeamName();
+                      
+                        break;
+                    case "3":
+                     
                         break;
                     case "q":
                         isRunning = false;
@@ -60,7 +63,9 @@ namespace Gruempelitunier
 
 
             }
+
             Console.WriteLine("Beliebige Taste drücken um zu beenden");
             Console.ReadKey();
         }
     }
+}

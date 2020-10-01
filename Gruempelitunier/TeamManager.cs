@@ -20,19 +20,28 @@ namespace Gruempelitunier
         //Change Team Name method
         internal void ChangeTeamName()
         {
-            PrintTeam();
+            if(teams == null)
+            PrintTeamName();
             var team = ChooseTeam();
             team.ChangeName();
         }
 
+        internal void DeleteTeam()
+        {
+            PrintTeamName();
+            var team = ChooseTeam();
+            teams.Remove(team);
+        }
+
+
         //Choose team method, is used by change name and delete team
-        private Team ChooseTeam()
+        internal Team ChooseTeam()
         {
             Console.WriteLine("Wählen Sie ein Team aus: ");
             Team team = null; //take the Variable team out, in order to make the while-loop
             do {
-                string imput = Console.ReadLine();
-                team = teams.FirstOrDefault(t => imput == t.TName); //First or default is like a method, also has a return...
+                string input = Console.ReadLine();
+                team = teams.FirstOrDefault(t => input == t.TName); //First or default is like a method, also has a return...
                 //To catch the default expression fo the FirstOrDefault
                 if (team == null) {
                     Console.WriteLine("Geben Sie einen gültigen Namen ein");
@@ -42,13 +51,17 @@ namespace Gruempelitunier
             return team;
         }
 
+
         //Output of the teams in an Console List
-        private void PrintTeam()
+        private void PrintTeamName()
         {
-            ConsoleTable
-                .From<Team>(teams)
-                .Configure(o => o.NumberAlignment = Alignment.Right)
-                .Write(Format.Alternative);
+            var table = new ConsoleTable("Team Name");
+            foreach (var team in teams) {
+
+                table.AddRow(team.TName);
+            }
+
+            table.Write();
         }
 
     }
