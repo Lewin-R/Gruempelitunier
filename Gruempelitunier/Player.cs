@@ -53,7 +53,7 @@ namespace Gruempelitunier
 
         public override string ToString()
         {
-            return $"{ID}, {Name}, {Prename}, {PhoneNumber}, {Street}, {HouseNumber}, {Place}, {Zip}";
+            return $"{Name}, {Prename}, {PhoneNumber}, {Street}, {HouseNumber}, {Place}, {Zip}";
         }
 
     }

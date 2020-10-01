@@ -8,7 +8,8 @@ namespace Gruempelitunier
 {
     internal class Program
     {
-        internal static readonly List<Team> teams = new List<Team>();
+        internal  readonly List<Team> teams = new List<Team>();
+        internal List<Game> Games = new List<Game>();
 
 
         private static void CreateTeam()
@@ -31,16 +32,19 @@ namespace Gruempelitunier
                 Console.WriteLine("Quit (q)");
 
                 switch (Console.ReadLine()) {
-                    case "1": CreateTeam();
+                    case "1":
+                        CreateTeam();
                         break;
-                    case "2": ChangeName();
+                    case "2":
+                        ChangeName();
                         break;
-                    case "q": isRunning = false;
+                    case "q":
+                        isRunning = false;
                         break;
 
                     default: throw new NotImplementedException();
                 }
-                
+
                 //break; for every loop
 
 
@@ -65,4 +69,3 @@ namespace Gruempelitunier
             Console.ReadKey();
         }
     }
-}

@@ -54,12 +54,12 @@ namespace Gruempelitunier
                 .Write(Format.Alternative);
         }
 
-         internal static Team ChangeName()
+        internal static Team ChangeName()
         {
             Console.WriteLine($"De aktuelle Name ist:{TName}. Geben Sie bitte den neuen Namen ein: ");
             TName = Console.ReadLine();
             return ChangeName();
         }
-        
+
     }
 }
