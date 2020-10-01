@@ -5,15 +5,15 @@ namespace Gruempelitunier
 {
     public class Player
     {
+        public List<Player> PA = new List<Player>();
+        public string Name { get; set; }
+        public string Prename { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Street { get; set; }
+        public string HouseNumber { get; set; }
+        public string Place { get; set; }
+        public string Zip { get; set; }
 
-
-        public  string Name { get; set; }
-        public  string Prename { get; set; }
-        public  string PhoneNumber { get; set; }
-        public  string Street { get; set; }
-        public  string HouseNumber { get; set; }
-        public  string Place { get; set; }
-        public  string Zip { get; set; }
 
         public static Player Create()
         {
@@ -39,8 +39,8 @@ namespace Gruempelitunier
             Console.WriteLine("Zip-Code: ");
             var Zip = Console.ReadLine();
 
-            return new Player
-            {
+
+            return new Player {
                 Name = Name,
                 Prename = Prename,
                 PhoneNumber = PhoneNumber,
@@ -48,15 +48,13 @@ namespace Gruempelitunier
                 HouseNumber = HouseNumber,
                 Place = Place,
                 Zip = Zip
-
             };
         }
 
         public override string ToString()
         {
-            return $"{Name}, {Prename}, {PhoneNumber}, {Street}, {HouseNumber}, {Place}, {Zip}";
+            return $"{ID}, {Name}, {Prename}, {PhoneNumber}, {Street}, {HouseNumber}, {Place}, {Zip}";
         }
-
 
     }
 }
