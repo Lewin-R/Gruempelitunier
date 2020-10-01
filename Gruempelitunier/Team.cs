@@ -6,9 +6,9 @@ namespace Gruempelitunier
 {
     internal class Team : Program
     {
-        internal static string TName { get; set; }
-        internal List<Player> PA { get; private set; } = new List<Player>();
 
+        internal List<Player> PA { get; private set; } = new List<Player>();
+        internal  string TName { get; set; }
         internal int Points { get; set; }
 
 
@@ -20,7 +20,6 @@ namespace Gruempelitunier
             var team = new Team() {
                 TName = TName
             };
-
 
             do {
                 Player p1 = Player.Create();
@@ -46,19 +45,11 @@ namespace Gruempelitunier
                 .Write(Format.Alternative);
         }
 
-        internal void PrintTeam()
-        {
-            ConsoleTable
-                .From<Team>(teams)
-                .Configure(o => o.NumberAlignment = Alignment.Right)
-                .Write(Format.Alternative);
-        }
-
-        internal static Team ChangeName()
+        internal void ChangeName()
         {
             Console.WriteLine($"De aktuelle Name ist:{TName}. Geben Sie bitte den neuen Namen ein: ");
             TName = Console.ReadLine();
-            return ChangeName();
+
         }
 
     }
