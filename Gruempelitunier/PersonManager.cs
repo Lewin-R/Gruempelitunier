@@ -8,23 +8,20 @@ namespace Gruempelitunier
 {
     class PersonManager
     {
-        internal List<Player> PA { get; set; } = null;
-        internal List<Team> teams { get; set; }
+        private readonly Team _team = new Team();
 
 
         //Create Team method
-        internal void CreatePlayer()
+        internal Player CreatePlayer()
         {
             var player = Player.Create();
-            PA.Add(player);
-            Team team = new Team();
-            //? Warum fnktioniert das nicht
+            return player;
         }
 
         //Change Team Name method
         internal void ChangePlayerAttributes()
         {
-            if (PA.Count == 0) {
+            if (_team.PA.Count == 0) {
                 Console.WriteLine("Es gibt keine Spieler");
                 CreatePlayer();
                 //Wie komme ich aus diesem heraus???
@@ -39,7 +36,7 @@ namespace Gruempelitunier
         {
             PrintPlayer();
             var player = ChoosePlayer();
-            PA.Remove(player);
+            _team.PA.Remove(player);
         }
 
         //Choose team method, is used by change name and delete team
@@ -49,7 +46,7 @@ namespace Gruempelitunier
             Player player = null; //take the Variable team out, in order to make the while-loop
             do {
                 string input = Console.ReadLine();
-                player = PA.FirstOrDefault(t => input == t.Name); //First or default is like a method, also has a return...
+                player = _team.PA.FirstOrDefault(t => input == t.Name); //First or default is like a method, also has a return...
                 //To catch the default expression fo the FirstOrDefault
                 if (player == null) {
                     Console.WriteLine("Geben Sie einen gültigen Namen ein");
@@ -63,7 +60,7 @@ namespace Gruempelitunier
         private void PrintPlayer()
         {
             var table = new ConsoleTable("Name", "Vorname", "Telefonnummer", "Strasse", "Hausnummer", "Ort", "PLZ");
-            foreach (var player in PA) {
+            foreach (var player in _team.PA) {
 
                 table.AddRow(player.Name, player.Prename, player.PhoneNumber, player.Street, player.HouseNumber, player.Place, player.Zip);
             }

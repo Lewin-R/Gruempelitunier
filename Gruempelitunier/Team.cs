@@ -10,10 +10,8 @@ namespace Gruempelitunier
 
         internal List<Player> PA  = new List<Player>();
         internal  string TName { get; set; }
-        internal List<Team> teams { get; set; }
         internal int Points { get; set; }
 
-        
 
         public static Team Create()
         {

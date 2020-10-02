@@ -1,96 +1,118 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Gruempelitunier
 {
-    class Menu
+    internal class Menu
     {
         private readonly TeamManager _teamManager = new TeamManager();
         private readonly PersonManager _personManager = new PersonManager();
-        private bool isRunning = true; //isRunning weil neues wort gross
+        private readonly Team _team = new Team();
+         //isRunning weil neues wort gross
 
         internal void MainMenu()
         {
+          bool isRunning = true;
             while (isRunning) {
+                Console.Clear();
                 Console.WriteLine("Team bearbeiten (1)");
                 Console.WriteLine("Spieler bearbeiten(2)");
+                Console.WriteLine("Spiele (3)");
                 Console.WriteLine("Quit (q)");
 
                 switch (Console.ReadLine()) {
                     case "1":
                         TeamEdit();
                         break;
+
                     case "2":
                         PersonEdit();
                         break;
-                    case "q":
-                        isRunning = false;
+
+                    case "3":
+                        GameEdit();
                         break;
 
-                    default: {
-                        throw new NotImplementedException();
-                    }
+                    case "q":
+                        isRunning = false;
+                        
+                        break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Bitte eine der Aufgeführten Nummern angeben");
+                        break;
                 }
             }
         }
 
         internal void TeamEdit()
         {
-            while (isRunning) {
+         bool isRunning2 = true;
+            while (isRunning2) {
                 Console.Clear();
                 Console.WriteLine("Team erstellen u. Spieler hinzufügen (1)");
                 Console.WriteLine("Teamname bearbeiten (2)");
                 Console.WriteLine("Team löschen (3)");
-                Console.WriteLine("Spiler zu Team hinzufügen (4)");
-                Console.WriteLine("Spieler von Team entfernen (5)");
                 Console.WriteLine("Press q to exit");
                 switch (Console.ReadLine()) {
                     case "1":
                         _teamManager.CreateTeam();
                         break;
+
                     case "2":
                         _teamManager.ChangeTeamName();
                         break;
+
                     case "3":
                         _teamManager.DeleteTeam();
                         break;
-                    case "4":
-
-                        break;
-                    case "5":
-
-                        break;
                     case "q":
-                        isRunning = false;
+                        MainMenu();
                         break;
 
-                    default: throw new NotImplementedException();
+                    default:
+                        Console.WriteLine("Bitte eine der Aufgeführten Nummern angeben");
+                        break;
                 }
             }
         }
 
-        internal void PersonEdit() 
+        internal void PersonEdit()
         {
-            Console.Clear();
-            Console.WriteLine("Spieler erstellen und zu Team hinzufügen (1)");
-            Console.WriteLine("Spieler bearbeiten (2)");
-            Console.WriteLine("Spieler löschen (3)");
-            switch (Console.ReadLine()) {
-                case "1":
-                    _personManager.CreatePlayer();
-                    break;
-                case "2":
-                    _personManager.ChangePlayerAttributes();
-                    break;
-                case "3":
-                    _personManager.DeletePlayer();
-                    break;
-                
+         bool isRunning3 = true;
+            while (isRunning3) {
+                Console.Clear();
+                Console.WriteLine("Spieler erstellen und zu Team hinzufügen (1)");
+                Console.WriteLine("Spieler bearbeiten (2)");
+                Console.WriteLine("Spieler löschen (3)");
+                Console.WriteLine("press q to exit");
+                switch (Console.ReadLine()) {
+                    case "1":
+                        _teamManager.AddPlayerToTeam();
+                        break;
 
-                default: throw new NotImplementedException();
+                    case "2":
+                        _personManager.ChangePlayerAttributes();
+                        break;
+
+                    case "3":
+                        _personManager.DeletePlayer();
+                        break;
+
+                    case "q":
+                        MainMenu();
+                        break;
+
+                    default:
+                        Console.WriteLine("Bitte eine der Aufgeführten Nummern angeben");
+                        break;
+                }
             }
+        }
 
+        internal void GameEdit()
+        {
+            Console.WriteLine("");
         }
     }
 }

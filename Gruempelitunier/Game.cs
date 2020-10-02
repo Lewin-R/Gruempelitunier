@@ -6,5 +6,6 @@
         public  int GoalT1 { get; set; }
         public  int GoalT2 { get; set; }
 
+
     }
 }

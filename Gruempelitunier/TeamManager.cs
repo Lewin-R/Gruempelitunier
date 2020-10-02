@@ -63,5 +63,18 @@ namespace Gruempelitunier
 
             table.Write();
         }
+
+        internal void AddPlayerToTeam()
+        {
+            if (teams.Count == 0) 
+            {
+                Console.WriteLine("Es sind keine Teams hinzugefügt worden");
+                CreateTeam();
+            }
+           PrintTeamName();
+           Team team =  ChooseTeam();
+           team.PA.Add(Player.Create());
+
+        }
     }
 }

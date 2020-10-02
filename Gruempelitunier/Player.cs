@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace Gruempelitunier
 {
@@ -50,8 +52,6 @@ namespace Gruempelitunier
                 Place = Place,
                 Zip = Zip
             };
-
-
         }
 
         //Override return
@@ -63,8 +63,39 @@ namespace Gruempelitunier
         internal void ChangePlayer()
         {
             Console.WriteLine("Welche Attribute möchten Sie bearbeiten");
-            Console.WriteLine($"De aktuelle Name ist:{Name}. Geben Sie bitte den neuen Namen ein: ");
-            Name = Console.ReadLine();
+
+            switch (Console.ReadLine().ToLower()) 
+            {
+
+                case "name":
+                    Console.WriteLine("Geben Sie einen neuen Namen ein: ");
+                    Name = Console.ReadLine();
+                    break;
+                case"vorname":
+                    Console.WriteLine("Geben Sie einen neuen Vornamen ein: ");
+                    Prename = Console.ReadLine();
+                    break;
+                case "telefonnummer":
+                    Console.WriteLine("Geben Sie eine neue Telefonnummer ein: ");
+                    PhoneNumber = Console.ReadLine();
+                    break;
+                case "strasse":
+                    Console.WriteLine("Geben Sie eine neue Strasse ein: ");
+                    Street = Console.ReadLine();
+                    break;
+                case "hausnummer":
+                    Console.WriteLine("Geben Sie eine neue Hasnummer ein: ");
+                    HouseNumber = Console.ReadLine();
+                    break;
+                case "ort":
+                    Console.WriteLine("Geben Sie einen neuen Ort ein: ");
+                    Place = Console.ReadLine();
+                    break;
+                case "plz":
+                    Console.WriteLine("Geben Sie eine neue PLZ ein: ");
+                    Zip = Console.ReadLine();
+                    break;
+            }    
         }
 
     }
