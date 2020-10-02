@@ -6,12 +6,12 @@ namespace Gruempelitunier
     {
         private readonly TeamManager _teamManager = new TeamManager();
         private readonly PersonManager _personManager = new PersonManager();
-        private readonly Team _team = new Team();
-         //isRunning weil neues wort gross
+        private readonly Game _game = new Game();
+        //isRunning weil neues wort gross
 
         internal void MainMenu()
         {
-          bool isRunning = true;
+            bool isRunning = true;
             while (isRunning) {
                 Console.Clear();
                 Console.WriteLine("Team bearbeiten (1)");
@@ -28,13 +28,13 @@ namespace Gruempelitunier
                         PersonEdit();
                         break;
 
-                    case "3":
-                        GameEdit();
+                    //case "3":
+                    //    GamePlay();
                         break;
 
                     case "q":
                         isRunning = false;
-                        
+
                         break;
 
                     default:
@@ -47,12 +47,13 @@ namespace Gruempelitunier
 
         internal void TeamEdit()
         {
-         bool isRunning2 = true;
+            bool isRunning2 = true;
             while (isRunning2) {
                 Console.Clear();
                 Console.WriteLine("Team erstellen u. Spieler hinzufügen (1)");
                 Console.WriteLine("Teamname bearbeiten (2)");
                 Console.WriteLine("Team löschen (3)");
+                Console.WriteLine("Teamliste anzeigen (4)");
                 Console.WriteLine("Press q to exit");
                 switch (Console.ReadLine()) {
                     case "1":
@@ -66,6 +67,10 @@ namespace Gruempelitunier
                     case "3":
                         _teamManager.DeleteTeam();
                         break;
+                    case "4":
+                        _teamManager.PrintTeamName();
+                        Console.ReadKey();
+                        break;
                     case "q":
                         MainMenu();
                         break;
@@ -76,15 +81,16 @@ namespace Gruempelitunier
                 }
             }
         }
-
+ 
         internal void PersonEdit()
         {
-         bool isRunning3 = true;
+            bool isRunning3 = true;
             while (isRunning3) {
                 Console.Clear();
                 Console.WriteLine("Spieler erstellen und zu Team hinzufügen (1)");
                 Console.WriteLine("Spieler bearbeiten (2)");
                 Console.WriteLine("Spieler löschen (3)");
+                Console.WriteLine("Spielerliste ausgeben (4)");
                 Console.WriteLine("press q to exit");
                 switch (Console.ReadLine()) {
                     case "1":
@@ -98,7 +104,10 @@ namespace Gruempelitunier
                     case "3":
                         _personManager.DeletePlayer();
                         break;
-
+                    case "4":
+                        _personManager.PrintPlayer();
+                        Console.ReadKey();
+                        break;
                     case "q":
                         MainMenu();
                         break;
@@ -110,9 +119,9 @@ namespace Gruempelitunier
             }
         }
 
-        internal void GameEdit()
-        {
-            Console.WriteLine("");
-        }
+        //internal void GamePlay()
+        //{
+        //   _game.GameRun();
+        //}
     }
 }

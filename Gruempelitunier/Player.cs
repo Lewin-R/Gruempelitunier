@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text.RegularExpressions;
 
 namespace Gruempelitunier
 {
     public class Player
     {
-        
         public string Name { get; set; }
         public string Prename { get; set; }
         public string PhoneNumber { get; set; }
@@ -15,7 +11,6 @@ namespace Gruempelitunier
         public string HouseNumber { get; set; }
         public string Place { get; set; }
         public string Zip { get; set; }
-
 
         //Add Player
         public static Player Create()
@@ -42,7 +37,6 @@ namespace Gruempelitunier
             Console.WriteLine("Zip-Code: ");
             var Zip = Console.ReadLine();
 
-
             return new Player {
                 Name = Name,
                 Prename = Prename,
@@ -64,39 +58,42 @@ namespace Gruempelitunier
         {
             Console.WriteLine("Welche Attribute möchten Sie bearbeiten");
 
-            switch (Console.ReadLine().ToLower()) 
-            {
-
+            switch (Console.ReadLine().ToLower()) {
                 case "name":
                     Console.WriteLine("Geben Sie einen neuen Namen ein: ");
                     Name = Console.ReadLine();
                     break;
-                case"vorname":
+
+                case "vorname":
                     Console.WriteLine("Geben Sie einen neuen Vornamen ein: ");
                     Prename = Console.ReadLine();
                     break;
+
                 case "telefonnummer":
                     Console.WriteLine("Geben Sie eine neue Telefonnummer ein: ");
                     PhoneNumber = Console.ReadLine();
                     break;
+
                 case "strasse":
                     Console.WriteLine("Geben Sie eine neue Strasse ein: ");
                     Street = Console.ReadLine();
                     break;
+
                 case "hausnummer":
                     Console.WriteLine("Geben Sie eine neue Hasnummer ein: ");
                     HouseNumber = Console.ReadLine();
                     break;
+
                 case "ort":
                     Console.WriteLine("Geben Sie einen neuen Ort ein: ");
                     Place = Console.ReadLine();
                     break;
+
                 case "plz":
                     Console.WriteLine("Geben Sie eine neue PLZ ein: ");
                     Zip = Console.ReadLine();
                     break;
-            }    
+            }
         }
-
     }
 }

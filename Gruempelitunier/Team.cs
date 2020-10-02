@@ -1,17 +1,14 @@
-﻿using System;
+﻿using ConsoleTables;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using ConsoleTables;
 
 namespace Gruempelitunier
 {
     internal class Team
     {
-
-        internal List<Player> PA  = new List<Player>();
-        internal  string TName { get; set; }
+        internal List<Player> PA = new List<Player>();
+        internal string TName { get; set; }
         internal int Points { get; set; }
-
 
         public static Team Create()
         {
@@ -47,7 +44,6 @@ namespace Gruempelitunier
         {
             Console.WriteLine($"De aktuelle Name ist:{TName}. Geben Sie bitte den neuen Namen ein: ");
             TName = Console.ReadLine();
-
         }
     }
 }

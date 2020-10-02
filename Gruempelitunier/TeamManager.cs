@@ -54,7 +54,7 @@ namespace Gruempelitunier
         }
 
         //Output of the teams in an Console List
-        private void PrintTeamName()
+        internal void PrintTeamName()
         {
             var table = new ConsoleTable("Team Name");
             foreach (var team in teams) {
@@ -66,15 +66,13 @@ namespace Gruempelitunier
 
         internal void AddPlayerToTeam()
         {
-            if (teams.Count == 0) 
-            {
+            if (teams.Count == 0) {
                 Console.WriteLine("Es sind keine Teams hinzugefügt worden");
                 CreateTeam();
             }
-           PrintTeamName();
-           Team team =  ChooseTeam();
-           team.PA.Add(Player.Create());
-
+            PrintTeamName();
+            Team team = ChooseTeam();
+            team.PA.Add(Player.Create());
         }
     }
 }

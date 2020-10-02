@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ConsoleTables;
+using System;
 using System.Linq;
-using System.Text;
-using ConsoleTables;
 
 namespace Gruempelitunier
 {
-    class PersonManager
+    internal class PersonManager
     {
         private readonly Team _team = new Team();
-
 
         //Create Team method
         internal Player CreatePlayer()
@@ -29,7 +26,6 @@ namespace Gruempelitunier
             PrintPlayer();
             var player = ChoosePlayer();
             player.ChangePlayer();
-
         }
 
         internal void DeletePlayer()
@@ -57,11 +53,10 @@ namespace Gruempelitunier
         }
 
         //Output of the teams in an Console List
-        private void PrintPlayer()
+        internal void PrintPlayer()
         {
             var table = new ConsoleTable("Name", "Vorname", "Telefonnummer", "Strasse", "Hausnummer", "Ort", "PLZ");
             foreach (var player in _team.PA) {
-
                 table.AddRow(player.Name, player.Prename, player.PhoneNumber, player.Street, player.HouseNumber, player.Place, player.Zip);
             }
 
