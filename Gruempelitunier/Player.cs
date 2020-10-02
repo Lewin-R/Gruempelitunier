@@ -5,7 +5,7 @@ namespace Gruempelitunier
 {
     public class Player
     {
-        public List<Player> PA = new List<Player>();
+        
         public string Name { get; set; }
         public string Prename { get; set; }
         public string PhoneNumber { get; set; }
@@ -15,6 +15,7 @@ namespace Gruempelitunier
         public string Zip { get; set; }
 
 
+        //Add Player
         public static Player Create()
         {
             //Input
@@ -49,11 +50,21 @@ namespace Gruempelitunier
                 Place = Place,
                 Zip = Zip
             };
+
+
         }
 
+        //Override return
         public override string ToString()
         {
             return $"{Name}, {Prename}, {PhoneNumber}, {Street}, {HouseNumber}, {Place}, {Zip}";
+        }
+
+        internal void ChangePlayer()
+        {
+            Console.WriteLine("Welche Attribute möchten Sie bearbeiten");
+            Console.WriteLine($"De aktuelle Name ist:{Name}. Geben Sie bitte den neuen Namen ein: ");
+            Name = Console.ReadLine();
         }
 
     }

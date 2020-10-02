@@ -8,7 +8,7 @@ namespace Gruempelitunier
     internal class Team
     {
 
-        internal List<Player> PA { get; private set; } = new List<Player>();
+        internal List<Player> PA  = new List<Player>();
         internal  string TName { get; set; }
         internal List<Team> teams { get; set; }
         internal int Points { get; set; }
@@ -28,9 +28,7 @@ namespace Gruempelitunier
                 team.PA.Add(p1);
                 Console.WriteLine("Möchten Sie noch einen Spieler hinzufügen? (y/n): ");
             } while (Console.ReadLine().ToLower() == "y");
-
             return team;
-
         }
 
         public override string ToString()
